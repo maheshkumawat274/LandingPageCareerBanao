@@ -3,7 +3,7 @@ import AdmissionForm from "./AdmissionForm";
 
 const Home = React.forwardRef<HTMLDivElement>((_,ref)  => {
   return (
-    <div ref={ref} className="flex flex-col items-center">
+    <div className="flex flex-col items-center">
       {/* Header */}
 
       {/* Hero Section (Padding added for fixed header) */}
@@ -22,7 +22,7 @@ const Home = React.forwardRef<HTMLDivElement>((_,ref)  => {
               />
               <div className="flex flex-col gap-4">
                 <div className="bg-purple-700 text-white p-4 rounded-lg flex items-center justify-center text-center">
-                  <p>
+                  <p className="text-2xl">
                     Fill out the application form in just a few minutes and
                     secure your admission! →
                   </p>
@@ -30,7 +30,7 @@ const Home = React.forwardRef<HTMLDivElement>((_,ref)  => {
                 <img
                   src="./imgs/home5.jpg"
                   alt="Group of Students"
-                  className="w-full h-[57vh] rounded-lg shadow-lg"
+                  className="w-full h-[50vh] rounded-lg shadow-lg"
                 />
               </div>
             </div>
@@ -44,7 +44,7 @@ const Home = React.forwardRef<HTMLDivElement>((_,ref)  => {
               />
             </div>
           </div>
-          <div className="flex flex-col justify-center">
+          <div ref={ref} className="flex flex-col justify-center">
             <AdmissionForm />
           </div>
         </section>
