@@ -1,56 +1,31 @@
 import React from "react";
 import AdmissionForm from "./AdmissionForm";
 
-const Home = React.forwardRef<HTMLDivElement>((_,ref)  => {
+const Home = React.forwardRef<HTMLDivElement>(() => {
   return (
     <div className="flex flex-col items-center">
-      {/* Header */}
+      {/* Hero Section */}
+      <div className="relative w-full min-h-screen">
+        {/* Background Image */}
+        <img
+          src="./imgs/group-student-walking-through-park-after-class-enjoy-talking-together.jpg"
+          alt="Background"
+          className="absolute top-0 left-0 w-full h-full object-cover"
+        />
 
-      {/* Hero Section (Padding added for fixed header) */}
-      <div className="w-full bg-white pt-10 px-0 sm:px-14 rounded-lg shadow-lg">
-        <h1 className="text-center text-3xl font-bold text-gray-700 px-2">
-          ADMISSIONS OPEN 2025
-        </h1>
-        <section className="grid grid-cols-1 md:grid-cols-2 mt-8 p-4">
-          <div className="relative w-full text-center">
-            {/* Desktop View (≥1024px) */}
-            <div className="hidden xl:grid grid-cols-2 gap-4 h-[70vh]">
-              <img
-                src="./imgs/home4.jpg"
-                alt="Students"
-                className="w-full h-[70vh] rounded-lg"
-              />
-              <div className="flex flex-col gap-4">
-                <div className="bg-purple-700 text-white p-4 rounded-lg flex items-center justify-center text-center">
-                  <p className="text-2xl xl:text-2xl">
-                    Fill out the application form in just a few minutes and
-                    secure your admission! →
-                  </p>
-                </div>
-                <img
-                  src="./imgs/home5.jpg"
-                  alt="Group of Students"
-                  className="w-full h-[50vh] rounded-lg shadow-lg"
-                />
-              </div>
-            </div>
+        {/* Overlay for better readability */}
+        <div className="absolute top-0 left-0 w-full h-full bg-black opacity-50"></div>
 
-            <div className="hidden lg:block md:block xl:hidden">
-              <img src="imgs/pexels-buro-millennial-636760-1438072.jpg" alt="Students" className="w-full h-[70vh] rounded-lg" />
-            </div>
-            {/* Mobile View (<1024px) */}
-            <div className="block md:hidden">
-              <img
-                src="./imgs/pexels-expressivestanley-1454360.jpg"
-                alt="Students"
-                className="w-full px-2 rounded-2xl h-[40vh] sm:h-0"
-              />
-            </div>
-          </div>
-          <div ref={ref} className="flex flex-col justify-center">
+        {/* Content Section */}
+        <div className="absolute top-0 right-0 w-full h-full flex items-center justify-center md:justify-evenly xl:justify-end px-0 sm:px-4 z-20">
+          {/* Semi-transparent background container */}
+          <div className="w-full sm:w-3/4 md:w-2/5 p-2 sm:p-6">
+            <h1 className="text-center text-2xl sm:text-3xl font-bold text-white mb-4">
+              ADMISSIONS OPEN 2025
+            </h1>
             <AdmissionForm />
           </div>
-        </section>
+        </div>
       </div>
     </div>
   );
