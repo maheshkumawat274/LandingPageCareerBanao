@@ -8,13 +8,13 @@ const Home = React.forwardRef<HTMLDivElement>((_,ref)  => {
 
       {/* Hero Section (Padding added for fixed header) */}
       <div className="w-full bg-white pt-10 px-0 sm:px-14 rounded-lg shadow-lg">
-        <h1 className="text-center text-3xl font-bold text-gray-700">
+        <h1 className="text-center text-3xl font-bold text-gray-700 px-2">
           ADMISSIONS OPEN 2025
         </h1>
         <section className="grid grid-cols-1 md:grid-cols-2 mt-8 p-4">
           <div className="relative w-full text-center">
             {/* Desktop View (≥1024px) */}
-            <div className="hidden md:grid grid-cols-2 gap-4 h-[70vh]">
+            <div className="hidden xl:grid grid-cols-2 gap-4 h-[70vh]">
               <img
                 src="./imgs/home4.jpg"
                 alt="Students"
@@ -22,7 +22,7 @@ const Home = React.forwardRef<HTMLDivElement>((_,ref)  => {
               />
               <div className="flex flex-col gap-4">
                 <div className="bg-purple-700 text-white p-4 rounded-lg flex items-center justify-center text-center">
-                  <p className="text-2xl">
+                  <p className="text-2xl xl:text-2xl">
                     Fill out the application form in just a few minutes and
                     secure your admission! →
                   </p>
@@ -35,12 +35,15 @@ const Home = React.forwardRef<HTMLDivElement>((_,ref)  => {
               </div>
             </div>
 
+            <div className="hidden lg:block md:block xl:hidden">
+              <img src="imgs/pexels-buro-millennial-636760-1438072.jpg" alt="Students" className="w-full h-[65vh] rounded-lg" />
+            </div>
             {/* Mobile View (<1024px) */}
             <div className="block md:hidden">
               <img
-                src="./imgs/home.png"
+                src="./imgs/pexels-expressivestanley-1454360.jpg"
                 alt="Students"
-                className="w-full h-auto rounded-lg"
+                className="w-full px-2 rounded-2xl h-[40vh] sm:h-0"
               />
             </div>
           </div>
