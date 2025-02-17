@@ -36,7 +36,7 @@ const Home = React.forwardRef<HTMLDivElement>((_,ref)  => {
             </div>
 
             <div className="hidden lg:block md:block xl:hidden">
-              <img src="imgs/pexels-buro-millennial-636760-1438072.jpg" alt="Students" className="w-full h-[65vh] rounded-lg" />
+              <img src="imgs/pexels-buro-millennial-636760-1438072.jpg" alt="Students" className="w-full h-[70vh] rounded-lg" />
             </div>
             {/* Mobile View (<1024px) */}
             <div className="block md:hidden">
