@@ -1,7 +1,7 @@
 import React from "react";
 import AdmissionForm from "./AdmissionForm";
 
-const Home = React.forwardRef<HTMLDivElement>(() => {
+const Home = React.forwardRef<HTMLDivElement>((_,ref) => {
   return (
     <div className="flex flex-col items-center">
       {/* Hero Section */}
@@ -19,7 +19,7 @@ const Home = React.forwardRef<HTMLDivElement>(() => {
         {/* Content Section */}
         <div className="absolute top-0 right-0 w-full h-full flex items-center justify-center md:justify-evenly xl:justify-end px-0 sm:px-4 z-20">
           {/* Semi-transparent background container */}
-          <div className="w-full sm:w-3/4 md:w-2/5 p-2 sm:p-6">
+          <div ref={ref} className="w-full sm:w-3/4 md:w-2/5 p-2 sm:p-6">
             <h1 className="text-center text-2xl sm:text-3xl font-bold text-white mb-4">
               ADMISSIONS OPEN 2025
             </h1>

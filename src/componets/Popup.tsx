@@ -1,34 +1,34 @@
-import { AiOutlineClose } from "react-icons/ai";
+import React from "react";
 import AdmissionForm from "./AdmissionForm";
 
-interface PopupProps {
-  show: boolean;
-  onClose: () => void;
-}
-
-const Popup: React.FC<PopupProps> = ({ show, onClose }) => {
-  if (!show) return null;
-
+const Home = React.forwardRef<HTMLDivElement>(() => {
   return (
-    <div className="fixed inset-0 flex items-center justify-center">
-      {/* Background Overlay */}
-      <div className="absolute inset-0 bg-black opacity-70"></div>
+    <div className="flex flex-col items-center">
+      {/* Hero Section */}
+      <div className="relative w-full min-h-screen">
+        {/* Background Image */}
+        <img
+          src="./imgs/group-student-walking-through-park-after-class-enjoy-talking-together.jpg"
+          alt="Background"
+          className="absolute top-0 left-0 w-full h-full object-cover"
+        />
 
-      {/* Popup Content */}
-      <div className="relative bg-white p-10 rounded shadow-lg z-50 w-[500px]">
-        {/* Close Icon Button (Top-Left Corner) */}
-        <button 
-          className="absolute top-1 left-1 text-gray-600 hover:text-red-600 p-1 cursor-pointer"
-          onClick={onClose}
-        >
-          <AiOutlineClose className="w-5 h-5" />
-        </button>
+        {/* Overlay for better readability */}
+        <div className="absolute top-0 left-0 w-full h-full bg-black opacity-50"></div>
 
-        <h1 className="font-semibold text-gray-700">Admission open 2025</h1>
-        <AdmissionForm />
+        {/* Content Section */}
+        <div className="absolute top-0 right-0 w-full h-full flex items-center justify-center md:justify-evenly xl:justify-end px-0 sm:px-4 z-20">
+          {/* Semi-transparent background container */}
+          <div className="w-full sm:w-3/4 md:w-2/5 p-2 sm:p-6">
+            <h1 className="text-center text-2xl sm:text-3xl font-bold text-white mb-4">
+              ADMISSIONS OPEN 2025
+            </h1>
+            <AdmissionForm />
+          </div>
+        </div>
       </div>
     </div>
   );
-};
+});
 
-export default Popup;
+export default Home;
