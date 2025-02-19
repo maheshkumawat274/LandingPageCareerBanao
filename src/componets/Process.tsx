@@ -60,6 +60,7 @@ const Process = () => {
         </div>
       ))}
     </div>
+    
     </div>
   );
 };
