@@ -14,8 +14,8 @@ const AdmissionForm: React.FC = () => {
   }, []);
   
   return (
-    <div className="w-80 sm:w-100 mx-auto h-[500px] p-4 pt-6 bg-white rounded-lg shadow-md" >
-      <div className="npf_wgts" data-height="450px" data-w="b214bb41b7025009877617366f69b11c"></div>
+    <div className="w-80 sm:w-100 mx-auto h-[605px] p-4 pt-2 bg-white rounded-lg shadow-md" >
+      <div className="npf_wgts" data-height="590px" data-w="b214bb41b7025009877617366f69b11c"></div>
     </div>
   );
 };
